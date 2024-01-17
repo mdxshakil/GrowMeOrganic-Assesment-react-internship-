@@ -1,5 +1,11 @@
+import { Container } from "@mui/material";
+
 const DataAndDepartmentPage = () => {
-  return <div>hello data and department page</div>;
+  return (
+    <Container>
+      <div>hello data and department page</div>
+    </Container>
+  );
 };
 
 export default DataAndDepartmentPage;

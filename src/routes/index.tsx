@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import SignInPage from "../pages/SignInPage";
-import DataAndDepartmentPage from "../pages/DataAndDepartmentPage";
 import { AppRoutes } from "../constants";
+import Main from "../layout/main";
+import DataAndDepartmentPage from "../pages/DataAndDepartmentPage";
 
 const router = createBrowserRouter([
   {
@@ -10,7 +11,13 @@ const router = createBrowserRouter([
   },
   {
     path: AppRoutes.data,
-    element: <DataAndDepartmentPage />,
+    element: <Main />,
+    children: [
+      {
+        path: "",
+        element: <DataAndDepartmentPage />,
+      },
+    ],
   },
 ]);
 
