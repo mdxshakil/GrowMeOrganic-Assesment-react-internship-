@@ -6,13 +6,17 @@ import Container from "@mui/material/Container";
 import Face6Icon from "@mui/icons-material/Face6";
 import TextInput from "../components/TextInput";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../constants";
 
-const SignIn = () => {
+const SignInPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(formData);
+    localStorage.setItem("auth", JSON.stringify(formData));
+    navigate(AppRoutes.data);
   };
 
   return (
@@ -75,4 +79,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default SignInPage;
