@@ -13,7 +13,7 @@ export default function NavigationBar() {
 
   useEffect(() => {
     //retrive username from localstorage and set to state
-    const name = JSON.parse(localStorage.getItem("auth") as string).name;
+    const name = JSON.parse(localStorage.getItem("auth") as string)?.name;
     setUserName(name);
   }, []);
 

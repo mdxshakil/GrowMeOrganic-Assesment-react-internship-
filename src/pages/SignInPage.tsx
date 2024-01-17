@@ -8,9 +8,14 @@ import TextInput from "../components/TextInput";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../constants";
+import { IFormData } from "../interfaces";
 
 const SignInPage = () => {
-  const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
+  const [formData, setFormData] = useState<IFormData>({
+    name: "",
+    email: "",
+    phone: "",
+  });
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

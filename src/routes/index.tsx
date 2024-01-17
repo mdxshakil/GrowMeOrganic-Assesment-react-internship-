@@ -3,6 +3,7 @@ import SignInPage from "../pages/SignInPage";
 import { AppRoutes } from "../constants";
 import Main from "../layout/main";
 import DataAndDepartmentPage from "../pages/DataAndDepartmentPage";
+import RequireAuth from "../components/RequireAuth";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <DataAndDepartmentPage />,
+        element: (
+          <RequireAuth>
+            <DataAndDepartmentPage />
+          </RequireAuth>
+        ),
       },
     ],
   },
