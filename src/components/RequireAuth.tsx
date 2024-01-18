@@ -11,7 +11,7 @@ interface IProps {
 
 const RequireAuth = ({ children }: IProps) => {
   const [user, setUser] = useState<IFormData>();
-  const [isLoading, setIsLoading] = useState<Boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   // Retrieve user info from local storage and set it to state
   useEffect(() => {
@@ -25,7 +25,7 @@ const RequireAuth = ({ children }: IProps) => {
     if (!isLoading && (!user?.email || !user?.name || !user?.phone)) {
       toast.error("You must enter your details to access this page!");
     }
-  }, [isLoading]);
+  }, [isLoading, user]);
 
   //show spinner if auth check is in progress
   if (isLoading) {

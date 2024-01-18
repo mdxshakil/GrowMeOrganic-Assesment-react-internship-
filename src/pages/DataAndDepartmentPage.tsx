@@ -1,10 +1,13 @@
-import DataTable from "../components/DataTable";
+import { Container } from "@mui/material";
+import DataTableSection from "../components/DataTableSection";
+import DepartmentsSection from "../components/DepartmentsSection";
 
 const DataAndDepartmentPage = () => {
   return (
-    <>
-      <DataTable />
-    </>
+    <Container>
+      <DataTableSection />
+      <DepartmentsSection />
+    </Container>
   );
 };
 

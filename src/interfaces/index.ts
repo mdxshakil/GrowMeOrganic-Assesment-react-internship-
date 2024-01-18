@@ -10,3 +10,8 @@ export interface IPosts {
   title: string;
   body: string;
 }
+
+export interface ICheckedState {
+  department: string;
+  subDepartments: string[];
+}

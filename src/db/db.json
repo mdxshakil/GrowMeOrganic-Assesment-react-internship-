@@ -1,0 +1,34 @@
+[
+  {
+    "department": "customer_service",
+    "sub_departments": ["support", "customer_success"]
+  },
+  {
+    "department": "design",
+    "sub_departments": ["graphic_design", "product_design", "web_design"]
+  },
+  {
+    "department": "development",
+    "sub_departments": [
+      "software_development",
+      "mobile_app_development",
+      "backend_development"
+    ]
+  },
+  {
+    "department": "marketing",
+    "sub_departments": [
+      "digital_marketing",
+      "content_marketing",
+      "social_media_marketing"
+    ]
+  },
+  {
+    "department": "operations",
+    "sub_departments": [
+      "supply_chain_management",
+      "facilities_management",
+      "quality_assurance"
+    ]
+  }
+]

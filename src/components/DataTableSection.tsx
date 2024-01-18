@@ -5,10 +5,11 @@ import { useEffect, useState } from "react";
 import Spinner from "./Spinner";
 import { PostDataColumns } from "../constants";
 import ErrorElement from "./ErrorElement";
+import { Typography } from "@mui/material";
 
-const DataTable = () => {
+const DataTableSection = () => {
   const [posts, setPosts] = useState<IPosts[]>([]);
-  const [isLoading, setIsLoading] = useState<Boolean>(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
 
   //fetch posts
@@ -38,11 +39,14 @@ const DataTable = () => {
   return (
     <Box
       sx={{
-        height: "90vh",
-        width: "100vw",
-        p: 3,
+        minHeight: "90vh",
+        width: "90vw",
+        py: 3,
       }}
     >
+      <Typography variant="h5" fontWeight="bold" pb={1}>
+        Posts Data:
+      </Typography>
       <DataGrid
         rows={posts}
         columns={PostDataColumns}
@@ -53,7 +57,7 @@ const DataTable = () => {
             },
           },
         }}
-        pageSizeOptions={[5]}
+        pageSizeOptions={[10, 20, 30]}
         checkboxSelection
         disableRowSelectionOnClick
       />
@@ -61,4 +65,4 @@ const DataTable = () => {
   );
 };
 
-export default DataTable;
+export default DataTableSection;
