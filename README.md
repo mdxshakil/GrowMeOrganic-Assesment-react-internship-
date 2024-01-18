@@ -1,30 +1,104 @@
-# React + TypeScript + Vite
+# React Internship Assesment by GrowMeOrganic
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Feature 1: First Page of the Application
 
-Currently, two official plugins are available:
+### Objective
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A form to collect user information, save it in local storage, and route the user to the second page upon completion. User is redirected to login page if attempting to access the second page without providing necessary details.
 
-## Expanding the ESLint configuration
+### Implementation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Form Fields:**
 
-- Configure the top-level `parserOptions` property like this:
+   - Name
+   - Phone number
+   - Email
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+2. **Action:**
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   - Upon completion, save user details in local storage.
+   - Route the user to the second page.
+
+3. **Validation:**
+   - If user attempts to access the second page without entering details, redirect them to the first page with a corresponding message.
+
+---
+
+## Feature 2: Second Page of the Application
+
+### Objective
+
+Fetch JSON details from an API and display the data in a table using the MUI React Data Grid package.
+
+### Implementation
+
+1. **API:**
+
+   - Fetch data from any API returning a list of JSON data (e.g., [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)).
+
+2. **Typescript:**
+
+   - Convert retrieved JSON data into a model/interface using Typescript.
+   - Reference: [Typescript Interfaces](https://www.educative.io/blog/typescript-interfaces)
+
+3. **Table Display:**
+   - Utilize MUI React Data Grid to present the data in a table.
+
+---
+
+## Feautre 3: Second Page of the Application
+
+### Objective
+
+Create a component displaying a list of departments with expandable and collapsible sub-departments. Ensure proper functionality and avoid errors within this critical component.
+
+### Implementation
+
+1. **Data Source:**
+
+   - Utilize the provided JSON data ([Google Docs](https://docs.google.com/document/d/1uQCFny5aXfMD9v2TPy3rbE8EHw-xZVdZfj4g-2Yv6IU/edit?usp=sharing)).
+
+2. **Component Features:**
+
+   - List of departments with sub-departments.
+   - User-expandable/collapsible sub-departments via icons.
+
+3. **User Interactions:**
+
+   - Selecting a department should select all corresponding sub-departments.
+   - If all sub-departments are selected, the parent department should also be selected.
+
+4. **Restrictions:**
+
+   - Use MUI library components only (excluding MUI/Tree).
+   - Do not use any external libraries apart from MUI.
+   - Strictly use Typescript.
+
+5. **UI Example:**
+   - Example UI provided, pixel perfection not required.
+
+## Installation Process
+
+1. **Clone Repository:**
+
+   ```bash
+   git clone [repository_url]
+   ```
+
+2. **Open in Editor :**
+   ```bash
+   Open the project in your preferred code editor (e.g., VS Code).
+   ```
+
+3. **Install Dependencies: :**
+   ```bash
+   npm install
+   ```
+
+4. **Run Development Server:: :**
+   ```bash
+   npm run dev
+   ```
+
+
+
