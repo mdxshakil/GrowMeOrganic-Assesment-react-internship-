@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Face6Icon from "@mui/icons-material/Face6";
 import TextInput from "../components/TextInput";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../constants";
 import { IFormData } from "../interfaces";
@@ -23,6 +23,15 @@ const SignInPage = () => {
     localStorage.setItem("auth", JSON.stringify(formData));
     navigate(AppRoutes.data);
   };
+
+  useEffect(() => {
+    // Check if user information is available in localStorage
+    const authData = localStorage.getItem("auth");
+    if (authData) {
+      // Redirect the user to previous page if user is loggedin
+      navigate(AppRoutes.data);
+    }
+  }, [navigate]);
 
   return (
     <Container component="main" maxWidth="xs">

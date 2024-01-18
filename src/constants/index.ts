@@ -12,18 +12,28 @@ export const ToastStyles = {
 };
 
 export const PostDataColumns: GridColDef[] = [
-  { field: "id", headerName: "ID", flex: 1 },
-  { field: "userId", headerName: "User ID", flex: 1 },
+  { field: "id", headerName: "ID", flex: 1, minWidth: 100, maxWidth: 100 },
+  {
+    field: "userId",
+    headerName: "User ID",
+    flex: 1,
+    minWidth: 100,
+    maxWidth: 100,
+  },
   {
     field: "title",
     headerName: "Title",
     editable: true,
     flex: 1,
+    minWidth: 300,
+    maxWidth: 500,
   },
   {
     field: "body",
     headerName: "Body",
     editable: true,
     flex: 1,
+    minWidth: 300,
+    maxWidth: 500,
   },
 ];

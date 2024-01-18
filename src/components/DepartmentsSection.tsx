@@ -76,7 +76,7 @@ function DepartmentsSection() {
   };
 
   return (
-    <Box sx={{ width: "350px", overflow: "hidden", pb: 6 }}>
+    <Box sx={{ width: "350px", overflow: "hidden", py: 3 }}>
       <Typography variant="h5" fontWeight="bold" pt={3} pb={1}>
         Select Departments:
       </Typography>

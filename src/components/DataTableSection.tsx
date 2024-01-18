@@ -39,9 +39,9 @@ const DataTableSection = () => {
   return (
     <Box
       sx={{
-        minHeight: "90vh",
-        width: "90vw",
+        height: "90vh",
         py: 3,
+        width: "100%",
       }}
     >
       <Typography variant="h5" fontWeight="bold" pb={1}>
@@ -60,6 +60,9 @@ const DataTableSection = () => {
         pageSizeOptions={[10, 20, 30]}
         checkboxSelection
         disableRowSelectionOnClick
+        sx={{
+          width: "100%",
+        }}
       />
     </Box>
   );
