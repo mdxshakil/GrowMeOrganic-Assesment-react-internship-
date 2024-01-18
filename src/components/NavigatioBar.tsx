@@ -71,7 +71,7 @@ export default function NavigationBar() {
           </Box>
         </Toolbar>
       </AppBar>
-      <Box component="main" sx={{ p: 3 }}>
+      <Box component="main">
         <Toolbar />
         <Outlet />
       </Box>

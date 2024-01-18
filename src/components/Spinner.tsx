@@ -1,7 +1,7 @@
 import Backdrop from "@mui/material/Backdrop";
 import CircularProgress from "@mui/material/CircularProgress";
 
-export default function SimpleBackdrop() {
+const Spinner = () => {
   return (
     <div>
       <Backdrop
@@ -12,4 +12,6 @@ export default function SimpleBackdrop() {
       </Backdrop>
     </div>
   );
-}
+};
+
+export default Spinner;

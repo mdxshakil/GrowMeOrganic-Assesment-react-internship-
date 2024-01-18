@@ -1,10 +1,10 @@
-import { Container } from "@mui/material";
+import DataTable from "../components/DataTable";
 
 const DataAndDepartmentPage = () => {
   return (
-    <Container>
-      <div>hello data and department page</div>
-    </Container>
+    <>
+      <DataTable />
+    </>
   );
 };
 
